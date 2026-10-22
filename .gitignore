@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+.env.vps
+*.log
+stderr.log
+orders-logs/
+tmp/
+logs/
+ecosystem.multishop.config.js*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
