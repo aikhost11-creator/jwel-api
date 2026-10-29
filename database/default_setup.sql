@@ -306,6 +306,35 @@ CREATE TABLE IF NOT EXISTS `promo_banners` (
   UNIQUE KEY `uq_promo_slot` (`rowIndex`, `colIndex`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `home_slots` (
+  `id`         INT(11)      NOT NULL AUTO_INCREMENT,
+  `slotKey`    VARCHAR(40)  NOT NULL,
+  `label`      VARCHAR(255) DEFAULT NULL,
+  `image`      VARCHAR(500) DEFAULT NULL,
+  `link`       VARCHAR(500) DEFAULT NULL,
+  `sortOrder`  INT(11)      NOT NULL DEFAULT 0,
+  `isActive`   TINYINT(1)   NOT NULL DEFAULT 1,
+  `created_at` DATETIME     NOT NULL,
+  `updated_at` DATETIME     NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_home_slot` (`slotKey`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT IGNORE INTO `home_slots` (`slotKey`, `label`, `link`, `sortOrder`, `isActive`, `created_at`, `updated_at`) VALUES
+('perk_1', NULL, NULL, 1, 1, NOW(), NOW()),
+('perk_2', NULL, NULL, 2, 1, NOW(), NOW()),
+('perk_3', NULL, NULL, 3, 1, NOW(), NOW()),
+('perk_4', NULL, NULL, 4, 1, NOW(), NOW()),
+('audience_him', 'Shop for him', '/shop', 5, 1, NOW(), NOW()),
+('audience_her', 'Shop for her', '/shop', 6, 1, NOW(), NOW()),
+('banner_campaign', NULL, NULL, 7, 1, NOW(), NOW()),
+('banner_mid', NULL, NULL, 8, 1, NOW(), NOW()),
+('gift_title', 'Gifting made easy', NULL, 9, 1, NOW(), NOW()),
+('gift_1', NULL, NULL, 10, 1, NOW(), NOW()),
+('gift_2', NULL, NULL, 11, 1, NOW(), NOW()),
+('gift_3', NULL, NULL, 12, 1, NOW(), NOW()),
+('banner_bottom', NULL, NULL, 13, 1, NOW(), NOW());
+
 CREATE TABLE IF NOT EXISTS `abandon_checkouts` (
   `id`          INT(11)       NOT NULL AUTO_INCREMENT,
   `sessionId`   VARCHAR(64)   NOT NULL,

@@ -421,6 +421,45 @@ const tables = [
         `
     },
 
+    // HOME PAGE SLOTS (icons, him/her, campaign banners, gifting)
+    {
+        name: 'home_slots',
+        sql: `
+            CREATE TABLE IF NOT EXISTS \`home_slots\` (
+                \`id\`         INT(11)      NOT NULL AUTO_INCREMENT,
+                \`slotKey\`    VARCHAR(40)  NOT NULL,
+                \`label\`      VARCHAR(255) DEFAULT NULL,
+                \`image\`      VARCHAR(500) DEFAULT NULL,
+                \`link\`       VARCHAR(500) DEFAULT NULL,
+                \`sortOrder\`  INT(11)      NOT NULL DEFAULT 0,
+                \`isActive\`   TINYINT(1)   NOT NULL DEFAULT 1,
+                \`created_at\` DATETIME     NOT NULL,
+                \`updated_at\` DATETIME     NOT NULL,
+                PRIMARY KEY (\`id\`),
+                UNIQUE KEY \`uq_home_slot\` (\`slotKey\`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+        `
+    },
+    {
+        name: 'home_slots_seed',
+        sql: `
+            INSERT IGNORE INTO \`home_slots\` (\`slotKey\`, \`label\`, \`link\`, \`sortOrder\`, \`isActive\`, \`created_at\`, \`updated_at\`) VALUES
+            ('perk_1', NULL, NULL, 1, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('perk_2', NULL, NULL, 2, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('perk_3', NULL, NULL, 3, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('perk_4', NULL, NULL, 4, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('audience_him', 'Shop for him', '/shop', 5, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('audience_her', 'Shop for her', '/shop', 6, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('banner_campaign', NULL, NULL, 7, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('banner_mid', NULL, NULL, 8, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('gift_title', 'Gifting made easy', NULL, 9, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('gift_1', NULL, NULL, 10, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('gift_2', NULL, NULL, 11, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('gift_3', NULL, NULL, 12, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00'),
+            ('banner_bottom', NULL, NULL, 13, 1, '2026-10-29 10:00:00', '2026-10-29 10:00:00');
+        `
+    },
+
     // PROMO BANNERS
     {
         name: 'promo_banners',
