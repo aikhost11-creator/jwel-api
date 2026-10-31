@@ -333,7 +333,23 @@ INSERT IGNORE INTO `home_slots` (`slotKey`, `label`, `link`, `sortOrder`, `isAct
 ('gift_1', NULL, NULL, 10, 1, NOW(), NOW()),
 ('gift_2', NULL, NULL, 11, 1, NOW(), NOW()),
 ('gift_3', NULL, NULL, 12, 1, NOW(), NOW()),
-('banner_bottom', NULL, NULL, 13, 1, NOW(), NOW());
+('banner_bottom', NULL, NULL, 13, 1, NOW(), NOW()),
+('story_banner', NULL, '/shop', 14, 1, NOW(), NOW()),
+('story_1', NULL, '/shop', 15, 1, NOW(), NOW()),
+('story_2', NULL, '/shop', 16, 1, NOW(), NOW()),
+('story_3', NULL, '/shop', 17, 1, NOW(), NOW()),
+('story_4', NULL, '/shop', 18, 1, NOW(), NOW()),
+('bond_title', 'Shop by Bond', NULL, 19, 1, NOW(), NOW()),
+('bond_1', 'Mother', '/shop', 20, 1, NOW(), NOW()),
+('bond_2', 'Husband', '/shop', 21, 1, NOW(), NOW()),
+('bond_3', 'Wife', '/shop', 22, 1, NOW(), NOW()),
+('bond_4', 'Sister', '/shop', 23, 1, NOW(), NOW()),
+('bond_5', 'Brother', '/shop', 24, 1, NOW(), NOW()),
+('bond_6', 'Friends', '/shop', 25, 1, NOW(), NOW()),
+('bond_7', 'Father', '/shop', 26, 1, NOW(), NOW()),
+('bond_8', 'Daughter', '/shop', 27, 1, NOW(), NOW()),
+('bond_9', 'Son', '/shop', 28, 1, NOW(), NOW()),
+('bond_banner', NULL, '/shop', 29, 1, NOW(), NOW());
 
 CREATE TABLE IF NOT EXISTS `abandon_checkouts` (
   `id`          INT(11)       NOT NULL AUTO_INCREMENT,

@@ -14,6 +14,22 @@ const DEFAULTS = [
     { slotKey: 'gift_2', label: null, link: null, sortOrder: 11 },
     { slotKey: 'gift_3', label: null, link: null, sortOrder: 12 },
     { slotKey: 'banner_bottom', label: null, link: null, sortOrder: 13 },
+    { slotKey: 'story_banner', label: null, link: '/shop', sortOrder: 14 },
+    { slotKey: 'story_1', label: null, link: '/shop', sortOrder: 15 },
+    { slotKey: 'story_2', label: null, link: '/shop', sortOrder: 16 },
+    { slotKey: 'story_3', label: null, link: '/shop', sortOrder: 17 },
+    { slotKey: 'story_4', label: null, link: '/shop', sortOrder: 18 },
+    { slotKey: 'bond_title', label: 'Shop by Bond', link: null, sortOrder: 19 },
+    { slotKey: 'bond_1', label: 'Mother', link: '/shop', sortOrder: 20 },
+    { slotKey: 'bond_2', label: 'Husband', link: '/shop', sortOrder: 21 },
+    { slotKey: 'bond_3', label: 'Wife', link: '/shop', sortOrder: 22 },
+    { slotKey: 'bond_4', label: 'Sister', link: '/shop', sortOrder: 23 },
+    { slotKey: 'bond_5', label: 'Brother', link: '/shop', sortOrder: 24 },
+    { slotKey: 'bond_6', label: 'Friends', link: '/shop', sortOrder: 25 },
+    { slotKey: 'bond_7', label: 'Father', link: '/shop', sortOrder: 26 },
+    { slotKey: 'bond_8', label: 'Daughter', link: '/shop', sortOrder: 27 },
+    { slotKey: 'bond_9', label: 'Son', link: '/shop', sortOrder: 28 },
+    { slotKey: 'bond_banner', label: null, link: '/shop', sortOrder: 29 },
 ];
 
 const ALLOWED = new Set(DEFAULTS.map((row) => row.slotKey));
